@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: employeemgmt
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: employeemgmt
+  template:
+    metadata:
+      labels:
+        app: employeemgmt
+    spec:
+      containers:
+        - name: employeemgmt
+          image: amitparouha/employeemgmt:latest
+          ports:
+            - containerPort: 8080
