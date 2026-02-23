@@ -1,4 +1,4 @@
-FROM openjdk:11-jre-slim
+FROM eclipse-temurin:21-jre-jammy
 
 COPY target/employeemgmt-0.0.1-SNAPSHOT.jar /app/employeemgmt.jar
 
